@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact Us Page</title>
+    <meta charset="utf-8">
+
+    <!--/**
+    * Meta Tag
+    */-->
+
+    <meta name="description" content="Contact Us Page with form and differnt links to navigate to other pages">
+    <meta name="keywords" content="contact us , home, blog , about us">
+
+    <!--/**
+     Links to external css file and normalise.css file
+    */-->
+
+    <link rel="stylesheet" href="../css/normalise.css">
+    <link rel="stylesheet" href="../css/customerService.css">
+</head>
+<body>
+<div id="wrapper">
+
+    <!-- /**
+     * Div tag with div containing heading tag and navigation bar at top of the page
+     */-->
+
+    <div id="header">
+        <div class="topLeftHeading"><h1>Electronic Gadgets Guide</h1></div>
+        <nav class="topNav" id="nav_menu">
+            <ul>
+                <li class="firstitem"><a href="#">Inside Electronics Gadgets Co</a>
+                    <ul>
+                        <li><a href="../html/trendingProductsPage.html">About Us</a></li>
+                        <li><a href="../html/customerService.html">Contact Us</a></li>
+                        <li><a href="../html/faq's.html">FAQ</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Legal</a></li>
+                    </ul>
+                </li>
+                <li class="lastitem"><a href="#">Quick Links</a>
+                    <ul>
+                        <li><a href="#">View Weekly Flyer</a></li>
+                        <li><a href="#">eFlyer Sign-Up</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!--/**
+    * main semantic tag contains the image and two columns type separation ie div which will contain form and
+      the aside which will be kind of side bar with different links
+    */-->
+
+    <div id="main">
+        <div id ="image">
+            <div class="top-Center-heading">
+                <h1>Contact Us</h1>
+                <p>Questions, Concerns or suggestions. How can we help you with awesome service?</p>
+            </div>
+            <img src="../images/contactUs.jpg" alt="image of laptop where someone is shown as if typing in something" height="250" width="1370" />
+        </div>
+        <div id ="mainContent">
+            <p id="firstChild">We Look Forward to hearing from you !</p>
+            <p id="secondChild">We are here to answer any questions you may have about our services.<br> Reach out to us and we'll respond as soon as we can.</p>
+            <form action="form.html" method="get" id="form">
+                <h2>Contact Form</h2>
+                <label for="name">Name: </label><input  id="name" name="name" title="Enter Name here" autofocus/><br/>
+                <label for="email">E-mail: </label><input type="email" id="email" name="email"  placeholder="Enter Email..." title="Enter Email here" /><br/>
+                <label for="phNo">Phone Number:  </label><input id="phNo" name="phNo" /><br/>
+                <label for="option">Option: </label>
+                <select id="option" name="option">
+                    <option hidden>.</option>
+                    <option >General question or comment ?</option>
+                    <option>Electronic gadgets enquiry ?</option>
+                    <option>Suggestions, how can we improve ?</option>
+                </select><br/>
+                <input type="radio" name="male" id="male" value="male"><label for="male">Male </label><br/>
+                <input type="radio" name="female" id="female" value="female"><label for="female">Female </label><br/>
+                <input type="radio" name="other" id="other" value="other" checked><label for="other">Other </label><br/>
+                <label for="textarea">Message </label><br/>
+                <textarea id="textarea" name="textarea" rows="5" cols="50" placeholder="Please Enter your message here.........."></textarea><br/>
+                <input type="submit" value="Send" id="submit"/>
+            </form>
+        </div>
+    </div>
+    <div id="aside">
+        <nav class="rightNav" >
+            <ul id="first">
+                <li>Email</li>
+                <li><a  id="l2" href="#">contact@abcxyz.com</a></li>
+            </ul>
+        </nav>
+        <nav class="rightNav" >
+            <ul id="second">
+                <li>Telephone</li>
+                <li>1-800-555-6666</li>
+            </ul>
+        </nav>
+        <address class="rightNav" >
+            <ul id="third">
+                <li>Address</li>
+                <li>AbcXyz Company</li>
+                <li>7181 Lancaster Avenue</li>
+                <li>Mississauga ON. L4T-2L1</li>
+            </ul>
+        </address>
+        <nav class="rightNav">
+            <ul id="fourth">
+                <li>Social</li>
+                <li><a  id="l10" href="#">linkedin.com/abcxyz</a></li>
+                <li><a  id="l11" href="#">twitter.com/abcxyz</a></li>
+                <li><a  id="l12" href="#">facebook.com/abcxyz</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!--/**
+    * Footer is divided into three different divs , where each div displays some information
+    */-->
+
+    <div id="footer">
+        <div class="upperFooterDiv">
+            <p id="l13">AS FEATURED IN</p>
+            <nav class="upperFooterNav">
+                <ul>
+                    <li>Tech Crunch</li>
+                    <li>Mashable</li>
+                    <li>The New York Times</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="middleFooterDiv">
+            <nav class="middleFooterNav" id="firstMiddleFooterNav">
+                <ul>
+                    <li>About Us</li>
+                    <li>I will use this little footer to reinforce my message <br>about who we are and what we specialise in</li>
+                    <li>Learn more --></li>
+                </ul>
+            </nav>
+            <nav class="middleFooterNav" id="secondMiddleFooterNav">
+                <ul>
+                    <li><a  href="#">MORE LINKS</a></li>
+                    <li><a  href="#">HOME</a></li>
+                    <li><a  href="../html/trendingProductsPage.html">ABOUT US</a></li>
+                    <li><a href="../html/customerService.html">CONTACT US</a></li>
+                </ul>
+            </nav>
+            <nav class="middleFooterNav" id="lastMiddleFooterNav">
+                <ul>
+                    <li><a href="../html/customerService.html">CONTACT US</a></li>
+                    <li><a href="#">Telephone</a></li>
+                    <li><a href="#">Email</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="bottomFooterDiv">
+            <nav class="bottomFooterNav">
+                <p>Copyright &copy; 2018 Ou Website Name<br></p>
+                <a href="mailto:yourfirstname@yourlastname.com">yourfirstname@yourlastname.com</a>
+            </nav>
+        </div>
+    </div>
+</div>
+</body>
+</html>

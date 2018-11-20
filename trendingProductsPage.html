@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Trending Products Page</title>
+    <meta charset="UTF-8">
+
+    <!--/**
+   * Meta Tag
+   */-->
+
+    <meta name="description" content="Tresding products Page with different images and links to navigate to other pages">
+    <meta name="keywords" content="contact us , home, blog , about us">
+
+    <!--/**
+     Links to external css file and normalise.css file
+    */-->
+
+    <link rel="stylesheet" href="../css/normalise.css">
+    <link rel="stylesheet" href="../css/trendingProducts.css">
+</head>
+<body>
+<div id="wrapper">
+
+    <!-- /**
+     * Div tag with div containing heading tag and navigation bar at top of the page
+     */-->
+
+    <div id="header">
+        <div class="topLeftHeading"><h1>Electronic Gadgets Guide</h1></div>
+        <nav class="topNav" id="nav_menu">
+            <ul>
+                <li class="firstitem"><a href="#">Inside Electronics Gadgets Co</a>
+                    <ul>
+                        <li><a href="../html/trendingProductsPage.html">About Us</a></li>
+                        <li><a href="../html/customerService.html">Contact Us</a></li>
+                        <li><a href="../html/faq's.html">FAQ</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Legal</a></li>
+                    </ul>
+                </li>
+                <li class="lastitem"><a href="#">Quick Links</a>
+                    <ul>
+                        <li><a href="#">View Weekly Flyer</a></li>
+                        <li><a href="#">eFlyer Sign-Up</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!--/**
+    * main div tag contains the image
+    */-->
+
+    <div id="main">
+        <div id ="image">
+            <img src="../images/1L.jpg" id="slideShow" height="400" width="1515" alt="Test image"/>
+        </div>
+        <div>
+            <button id="button1" onclick="changeImage(-1)">Previous</button>
+            <button id="button2" onclick="changeImage(1)">Next</button>
+        </div>
+        <div id ="mainContent">
+            <div>Trending Products</div>
+            <a href="">
+                <figure>
+                    <img alt="" src="../images/iphone.jpg" width="200" height="250">
+                    <figcaption>iphone8 64gb</figcaption>
+                </figure>
+            </a>
+            <a href="">
+                <figure>
+                    <img alt="" src="../images/lg.jpg" width="200" height="250">
+                    <figcaption>LG G6</figcaption>
+                </figure>
+            </a>
+            <a href="">
+                <figure>
+                    <img alt="" src="../images/ipad.jpg" width="200" height="250">
+                    <figcaption>ipad Pro</figcaption>
+                </figure>
+            </a>
+            <a href="">
+                <figure>
+                    <img alt="" src="../images/xperia.jpg" width="200" height="250">
+                    <figcaption>Xperia XZ1</figcaption>
+                </figure>
+            </a>
+            <a href="">
+                <figure>
+                    <img alt="" src="../images/canon.jpg" width="200" height="250">
+                    <figcaption>canon 70D</figcaption>
+                </figure>
+            </a>
+            <a href="">
+                <figure>
+                    <img alt="" src="../images/sony.jpg" width="200" height="250">
+                    <figcaption>Sony DSCHX350</figcaption>
+                </figure>
+            </a>
+            <a href="">
+                <figure>
+                    <img alt="" src="../images/iphonexs.jpg" width="200" height="250">
+                    <figcaption>iphone XS</figcaption>
+                </figure>
+            </a>
+        </div>
+    </div>
+    <!--/**
+    * Footer is divided into three different divs , where each div displays some information
+    */-->
+
+    <div id="footer">
+        <nav>
+            <ul id="menu1">
+                <li><a href="#">About Our Co.</a></li>
+                <li><a href="#">Quick Links</a></li>
+                <li><a href="#">Connect With Us</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul id="menu2">
+                <li><a href="#">Who we are</a></li>
+                <li><a href="../html/customerService.html">Contact Us</a></li>
+                <li><a href="../html/faq's.html">FAQ</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Legal</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul id="menu3">
+                <li><a href="#">Weekly Flyer</a></li>
+                <li><a href="../html/trendingProductsPage.html">About Us</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul id="menu4">
+                <li><a href="#">Linked-In</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Gmail</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+        </nav>
+        <div id="empty"></div>
+        <h1>Electronic Gadgets Guide</h1>
+        <p>Copyright &copy; 2018 Electronic Gadgets Guide<br></p>
+    </div>
+</div>>
+<script>
+    //Section 1 --------------declare an array of images
+    var myImagesArray = ["../images/1L.jpg","../images/2L.jpg","../images/3L.jpg","../images/4L.jpg","../images/5L.jpg","../images/6L.jpg","../images/7L.jpg"];
+    var currentIndex = 0;
+    var lowerLimit = 0;
+    var upperLimit = myImagesArray.length - 1;
+
+    setInterval('changeImage(1)' , 3000);
+    function changeImage(direction){
+        currentIndex = currentIndex + direction;
+        if(currentIndex > upperLimit){
+            currentIndex = lowerLimit;
+        }
+
+        if(currentIndex < lowerLimit){
+            currentIndex = upperLimit;
+        }
+
+        document.getElementById('slideShow').src = myImagesArray[currentIndex];
+    }
+</script>
+</body>
+</html>

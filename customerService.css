@@ -1,0 +1,408 @@
+/* basic setup */
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html
+{
+    background: linear-gradient(to bottom , white 0% , #0C022C 100%);
+}
+
+/* the styles for the header, main content, sidebar, and footer */
+
+#wrapper {
+    width: 90%;
+    background-color: white;
+    margin: 15px auto;
+    border: 1px solid black;
+}
+
+#header {
+    height:80px;
+}
+
+#header h1{
+    background-color: #2B08A1;
+}
+.topLeftHeading{
+    float: left;
+    background-color: white;
+    color: white;
+    text-align: center;
+    padding: 9px 26px;
+    text-decoration: none;
+    font-family: Verdana;
+}
+
+.topNav {
+    background-color: #2B08A1;
+    padding: 24px 26px;
+    font-family: Verdana;
+}
+
+#nav_menu{
+    justify-content: flex-end;
+}
+
+#nav_menu li {
+    margin-left: 35px;
+    margin-right: 0;
+}
+
+/* The styles for the operation of the 2-tier navigation menu */
+#nav_menu ul {
+    list-style: none;
+    position: relative;    /* So the first submenu can be positioned within the main menu */
+}
+#nav_menu ul li {
+    float: right;
+}
+#nav_menu ul ul {
+    display: none;         /* Don't display submenu until hover of the li element */
+    position: absolute;
+    top: 100%;             /* Position the submenu at the bottom of the main menu */
+}
+#nav_menu ul ul li {
+    float: none;           /* Display the submenus vertically */
+}
+#nav_menu ul li:hover > ul {
+    display: block;        /* Display the submenu on hover of the li element */
+}
+#nav_menu > ul::after {
+    content: "";
+    display: block;
+    clear: right;
+}
+
+/* The styles for the formatting of the 2-tier navigation menu */
+#nav_menu ul {
+    margin: 0;
+    padding: 0;
+}
+#nav_menu ul li a {
+    text-align: center;
+    display: block;
+    width: 176px;
+    padding: 1em 0;
+    text-decoration: none;
+    background-color: #2B08A1;
+    color: white;
+    font-weight: bold;
+}
+#nav_menu ul li.lastitem a {
+    width: 178px;               /* So the menu fills the 706px width of the page */
+}
+#nav_menu ul li.firstitem a {
+    width: 278px;               /* So the menu fills the 706px width of the page */
+}
+
+#nav_menu ul li a:hover, #nav_menu ul li a:focus {
+    background-color: #4A19EE;
+}
+
+#image {
+    width: 100%;
+    height: 250px;
+    clear: both;
+}
+
+.top-Center-heading {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Verdana;
+    color: #2B08A1;
+}
+
+.top-Center-heading h1{
+    color: white;
+}
+
+#mainContent{
+    width: 60%;
+    height: 900px;
+    float: left;
+    background-color: #E6E6E6;
+}
+
+#mainContent #firstChild{
+    font-family: Verdana;
+    color: #2B08A1;
+    font-size: 29px;
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+#mainContent #secondChild{
+    font-family: Verdana;
+    font-size: 12px;
+    position: absolute;
+    top: 75%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: #2B08A1;
+}
+
+#mainContent #form{
+    margin-top: 30%;
+    margin-left: 10%;
+}
+
+#form h2{
+    font-size: 25px;
+    font-family: Verdana;
+    color: #2B08A1;
+    padding-bottom: 1em;
+}
+
+#form input#name , input#email , input#phNo , input#male , input#female , input#other{
+    margin-bottom: .7em;
+}
+
+#form input#name , input#email , input#phNo , input#male , input#female , input#other{
+    padding-top: .2em;
+    padding-bottom: .2em;
+    padding-left: .2em;
+}
+
+#form select#option{
+    margin-bottom: .5em;
+}
+
+#form select#option{
+    padding-top: .2em;
+    padding-bottom: .2em;
+    padding-left: .2em;
+}
+
+#form textarea#textarea{
+    margin-bottom: .5em;
+    margin-top: .5em;
+}
+
+#form textarea#textarea{
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left: .5em;
+}
+
+#form label{
+    font-family: Verdana;
+    font-size: 15px;
+    float: left;
+    width: 9em;
+    padding-right: .5em;
+    margin: 0;
+    color: #2B08A1;
+}
+
+#form input#submit{
+    padding-bottom: .5em;
+    padding-top: .5em;
+    padding-left: .5em;
+    padding-right: .5em;
+    width:110px;
+    background-color: lavender;
+    font-size: 17px;
+    font-family: Verdana;
+    color: #2B08A1;
+
+}
+
+#aside{
+    width: 39.999%;
+    height: 900px;
+    float: right;
+    background-color: #E6E6E6;
+
+}
+
+.rightNav ul#first{
+    text-decoration: none;
+    list-style: none;
+    padding-bottom: 1em;
+    margin-top: 7em;
+    margin-left: 5em;
+}
+
+.rightNav ul#first li{
+    padding-bottom: .5em;
+}
+
+.rightNav ul#second {
+    text-decoration: none;
+    list-style: none;
+    padding-bottom: 1em;
+    margin-top: 4em;
+    margin-left: 5em;
+}
+
+.rightNav ul#second li{
+    padding-bottom: .5em;
+}
+
+.rightNav ul#third{
+    text-decoration: none;
+    list-style: none;
+    padding-bottom: 1em;
+    margin-top: 4em;
+    margin-left: 5em;
+}
+
+.rightNav ul#third li{
+    padding-bottom: .5em;
+}
+
+.rightNav ul#fourth{
+    text-decoration: none;
+    list-style: none;
+    padding-bottom: 1em;
+    margin-top: 4em;
+    margin-left: 5em;
+}
+
+.rightNav ul#fourth li{
+    padding-bottom: .5em;
+}
+
+.rightNav ul{
+    display:block;
+    margin: 30px;
+    text-align: left;
+    font-family: Verdana;
+    font-size: 16px;
+}
+
+.rightNav a#l2, a#l10, a#l11, a#l12:link { color: #2B08A1;}
+.rightNav ul li:visited { color: green; }
+.rightNav a#l2:hover{ color: red;}
+.rightNav a#l10:hover{ color: red;}
+.rightNav a#l11:hover{ color: red;}
+.rightNav a#l12:hover{ color: red;}
+
+
+#footer {
+    clear: both;
+    height:250px;
+}
+
+p#l13{
+    position: absolute;
+    top: 176%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Verdana;
+    color: white;
+    font-size: 14px;
+    margin-top: .5em;
+}
+
+.upperFooterNav ul {
+    list-style: none;
+    padding: 2em 4.5em;    /* padding above and below li elements */
+    text-align: center;
+}
+
+.upperFooterNav ul li {
+    display: inline;
+    padding: 1em 9.5em;
+}
+
+.upperFooterNav{
+    width: 100%;
+    color: white;
+    background-color: #666262;
+    overflow: hidden;
+}
+
+.middleFooterNav{
+    width: 100%;
+    height: 80px;
+    color: white;
+    background-color: #353232;
+}
+
+#firstMiddleFooterNav ul{
+    text-decoration: none;
+    list-style: none;
+    display:block;
+    padding: 20px 0 0 0;
+    text-align: left;
+    font-family: Verdana;
+    margin-left: 30px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#secondMiddleFooterNav ul{
+    list-style: none;
+    text-decoration: none;
+    padding: 15px 0 0 0;
+    display:block;
+    margin: 0 90px 0 10px ;
+    text-align: center;
+    font-family: Verdana;
+    font-size: 16px;
+}
+
+#secondMiddleFooterNav a{
+    text-decoration: none;
+}
+
+#secondMiddleFooterNav ul li{
+    padding-bottom: 1em;
+}
+
+#secondMiddleFooterNav a:link { color: #030E42; }
+#secondMiddleFooterNav a:hover { color: red; }
+
+
+#lastMiddleFooterNav ul{
+    list-style: none;
+    text-decoration: none;
+    display:block;
+    margin: 0 20px  0 0 ;
+    padding: 5px 40px 0 0;
+    text-align: right;
+    font-family: Verdana;
+    font-size: 16px;
+    clear: both;
+}
+
+#lastMiddleFooterNav ul li{
+}
+
+#lastMiddleFooterNav a{
+    text-decoration: none;
+}
+
+#lastMiddleFooterNav a:link { color: #030E42; }
+#lastMiddleFooterNav a:hover { color: red; }
+
+.bottomFooterNav{
+    width: 100%;
+    color: white;
+    background-color: #0F0F0F;
+}
+
+.bottomFooterNav p{
+    float: left;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.bottomFooterNav a{
+    float: right;
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
+.bottomFooterNav a:link { color: white;}
+.bottomFooterNav a:hover { color:red; }
+
+

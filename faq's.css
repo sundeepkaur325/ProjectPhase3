@@ -1,0 +1,305 @@
+/* basic setup */
+* {
+    margin: 0;
+    padding: 0; }
+
+html { background-color:white; }
+
+
+/* the styles for the header, main content and footer */
+
+#wrapper {
+    background-color: white;
+    font-family: sans-serif;
+    display: grid;
+    width: 1515px;
+    grid-template-rows: 90px 1050px 370px ;
+}
+
+#header { border-bottom: 2px solid #ef9c00;
+}
+
+#header h1{
+    background-color: #2B08A1;
+    padding: 9px 26px;
+}
+.topLeftHeading{
+    float: left;
+    background-color: white;
+    color: white;
+    text-align: center;
+    padding: 9px 26px;
+    text-decoration: none;
+    font-family: Verdana;
+}
+
+.topNav {
+    background-color: #2B08A1;
+    padding: 24px 26px;
+    font-family: Verdana;
+}
+
+#nav_menu{
+    justify-content: flex-end;
+}
+
+#nav_menu li {
+    margin-left: 35px;
+    margin-right: 0;
+}
+
+/* The styles for the operation of the 2-tier navigation menu */
+#nav_menu ul {
+    list-style: none;
+    position: relative;    /* So the first submenu can be positioned within the main menu */
+}
+#nav_menu ul li {
+    float: right;
+}
+#nav_menu ul ul {
+    display: none;         /* Don't display submenu until hover of the li element */
+    position: absolute;
+    top: 100%;             /* Position the submenu at the bottom of the main menu */
+}
+#nav_menu ul ul li {
+    float: none;           /* Display the submenus vertically */
+}
+#nav_menu ul li:hover > ul {
+    display: block;        /* Display the submenu on hover of the li element */
+}
+#nav_menu > ul::after {
+    content: "";
+    display: block;
+    clear: right;
+}
+
+/* The styles for the formatting of the 2-tier navigation menu */
+#nav_menu ul {
+    margin: 0;
+    padding: 0;
+}
+#nav_menu ul li a {
+    text-align: center;
+    display: block;
+    width: 176px;
+    padding: 1em 0;
+    text-decoration: none;
+    background-color: #2B08A1;
+    color: white;
+    font-weight: bold;
+}
+
+#nav_menu ul li.lastitem a {
+    width: 178px;               /* So the menu fills the 706px width of the page */
+}
+#nav_menu ul li.firstitem a {
+    width: 278px;               /* So the menu fills the 706px width of the page */
+}
+
+#nav_menu ul li a:hover, #nav_menu ul li a:focus {
+    background-color: #4A19EE;
+    color: red;
+}
+
+#image {
+    width: 100%;
+    height: 350px;
+    margin-top: .5em;
+}
+
+.top-Center-heading {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Verdana;
+    color: #2B08A1;
+    font-size: 25px;
+
+}
+
+.top-Center-heading h1{
+    font-family: Calibri;
+    color: #2B08A1;
+    font-size: 65px;
+}
+
+#mainContent h2{
+    margin-left: 1em;
+    font-family: Calibri;
+    color: #2B08A1;
+    font-size: 45px;
+    border-bottom: 3px solid #D9D6D3;
+    margin-right: 22px;
+    margin-bottom: 1em;
+}
+
+.collapsible {
+    background-color: white;
+    color: #2B08A1;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border-bottom:1px solid #D9D6D3;
+}
+
+.active, .collapsible:hover {
+    background-color: whitesmoke;
+}
+
+.collapsible:after {
+    content: '\002B';
+    color: #2B08A1;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: whitesmoke;
+    color: #918F8D;
+    font-size: 15px;
+}
+
+#footer {
+    background-color: #E8E5E2;
+}
+
+#footer ul#menu1{
+    margin: 35px 0 0 0;
+    display: flex;
+    list-style-type: none;
+}
+
+#footer ul#menu1 li {
+    border-bottom: 1px solid #918F8D;
+    padding-bottom: .5em;
+    margin-right: 1em;
+    margin-left: 6em;
+}
+
+#footer ul#menu1 li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Verdana;
+    color: #2B08A1;
+    padding: 7em;
+
+}
+
+#menu1 { flex-direction: row;}
+
+
+
+#footer ul#menu2{
+    margin: 35px 0 0 33px;
+    display: flex;
+    list-style-type: none;
+    width: 350px;
+    text-align: center;
+}
+
+#footer ul#menu2 li {
+    padding-bottom: .5em;
+    margin-right: 1em;
+    margin-left: 1em;
+}
+
+#footer ul#menu2 li a {
+    text-decoration: none;
+    font-size: 14px;
+    font-family: Verdana;
+    color: #5B5A58;
+    padding: 7em;
+}
+
+#footer ul#menu2 li a:hover{color: red;}
+#menu2 { flex-direction: column;}
+
+#footer ul#menu3{
+    list-style-type: none;
+    text-align: center;
+    width: 200px;
+    position: absolute;
+    top: 176%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#footer ul#menu3 li {
+    padding-bottom: .5em;
+}
+
+#footer ul#menu3 li a {
+    text-decoration: none;
+    font-size: 14px;
+    font-family: Verdana;
+    color: #5B5A58;
+}
+
+#footer ul#menu3 li a:hover{color: red;}
+#menu3 { flex-direction: column;}
+
+#footer ul#menu4{
+    list-style-type: none;
+    text-align: center ;
+    width: 200px;
+    position: absolute;
+    top: 180%;
+    left: 82%;
+    transform: translate(-50%, -50%);
+}
+
+#footer ul#menu4 li {
+    padding-bottom: .7em;
+}
+
+#footer ul#menu4 li a {
+    text-decoration: none;
+    font-size: 14px;
+    font-family: Verdana;
+    color: #5B5A58;
+}
+
+#footer ul#menu4 li a:hover{color: red;}
+#menu4 { flex-direction: column;}
+
+#footer #empty{
+    border-top: 3px solid #444342;
+    margin-top: 2em;
+margin-right: 2em;
+    margin-left: 2em;
+}
+#footer h1{
+    background-color: #2B08A1;
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 9px 26px;
+    text-decoration: none;
+    font-family: Verdana;
+    margin-left: 2em;
+    margin-top: .5em;
+}
+
+#footer p{
+    float: right;
+    color: #2B08A1;
+    text-align: center;
+    padding: 9px 26px;
+    text-decoration: none;
+    font-family: "Rage Italic";
+    margin-right: 2em;
+    margin-top: .5em;
+}
